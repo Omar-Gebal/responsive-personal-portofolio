@@ -16,8 +16,25 @@ h1{
     font-size: 4rem;
     text-align: center;
 }
+h2{
+    font-size: 2.5rem;
+}
+
+li
+{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--main-color);
+}
+
 .title{
     margin-bottom: 40px;
+}
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /* Nav bar */
@@ -34,12 +51,10 @@ nav{
 }
 
 .nav-item {
-    list-style: none;
     margin-right: 5rem;
 }
 
 .nav-item a {
-    text-decoration: none;
     font-size: 2rem;
     color: white;
 }
@@ -66,7 +81,7 @@ nav{
 
 #personal-img{
     width: 250px;
-    margin-top: 40px;
+    margin-top: 100px;
     margin-bottom: 40px;
 }
 
@@ -74,7 +89,11 @@ nav{
     margin-top: 40px;
 }
 
+
 /* Projects section */
+#weird{
+    margin-top: 90px;
+}
 #projects{
     display: flex;
     height: 100vh;
@@ -89,8 +108,139 @@ nav{
 
 .container{
     padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-link{
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+.project-img{
+    width: 350px;
+}
+
+/*Contact me*/
+
+#github-logo{
+    width: 30px;
+    height: 30px;
+}
+
+#contact-me{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.contact-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.profile-link{
+    font-size: 2rem;
+    margin: 0px 10px;
+}
+
+/* media queries */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+    #projects{
+        display: flex;
+        height: auto;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+    /*General*/
+    h1{
+        font-size: 3rem;
+        text-align: center;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    /*navbar*/
+    nav{
+        position: relative;
+        width: 100%;
+    }
+    .nav-list {
+        background-color: black;
+        padding: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-item {
+        margin:1rem 0rem;
+    }
+    .nav-item:first-child {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    /*intro*/
+    #personal-img{
+        width: 150px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    #down-arrow{
+        margin-top: 40px;
+        width: 60px;
+    }
+
+    /* Projects section */
+    #weird{
+        margin-top: 10px;
+    }
+    .project-img{
+        width: 300px;
+    }
+    /*Contact*/
+
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    h1{
+        font-size: 2.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .project-link{
+        font-size: 1.5rem;
+    }
+    .contact-block{
+        flex-direction: column;
+    }
+    .profile-link{
+        margin: 10px 0px;
+    }
+    .project-img{
+        width: 250px;
+    }
 }
 /* Animations */
 .nav-item a:hover {
     color:var(--teritary-color);
+}
+
+.project-link:hover{
+    background-color: var(--main-color);
+    color: white;
 }
